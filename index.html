@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Тал нутаг Аялал: Монголын аяллын компани</title>
+ <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="progress" aria-hidden="true"></div>
+
+ <header class="site-header">
+  <a class="logo" href="#">Тал нутаг Аялал</a>
+
+  <div class="header-tools">
+   <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+    <span class="theme-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Харанхуй горим</span>
+   </button>
+   <button class="menu-toggle" id="menuToggle" type="button" aria-controls="menu" aria-expanded="false">
+    <span class="menu-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Цэс нээх</span>
+   </button>
+  </div>
+
+  <nav class="navbar" id="menu" aria-label="Үндсэн цэс">
+   <ul class="nav-list">
+    <li><a class="nav-link" href="#">Нүүр</a></li>
+    <li><a class="nav-link" href="#gallery">Аяллын чиглэл</a></li>
+    <li><a class="nav-link" href="#culture">Яагаад бид</a></li>
+    <li><a class="nav-link" href="#video">Видео</a></li>
+    <li><a class="nav-link" href="#holboo">Холбоо барих</a></li>
+   </ul>
+  </nav>
+ </header>
+
+ <main>
+  <!-- Hero -->
+  <section class="hero">
+   <div class="hero-sun" aria-hidden="true"></div>
+   <span class="cloud c1" aria-hidden="true"></span>
+   <span class="cloud c2" aria-hidden="true"></span>
+   <div class="hero-text">
+    <p class="eyebrow" style="--i:0">Монголын аяллын компани</p>
+    <h1 style="--i:1">Монголын тал нутгаар мартагдашгүй аялцгаая</h1>
+    <p style="--i:2">Хөвсгөлөөс Говь хүртэл, туршлагатай хөтөч, найдвартай үйлчилгээгээр танд зориулсан аяллыг бид зохион байгуулна.</p>
+    <a class="btn" href="#gallery" style="--i:3">Аяллын чиглэл үзэх</a>
+   </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+   <h2 class="section-title">Манай аяллын чиглэлүүд</h2>
+   <p class="lead">Аяллын картан дээр хулганаа аваачвал (утсан дээр товшвол) эргэж, аяллын дэлгэрэнгүй мэдээлэл болон газрын зураг гарна.</p>
+
+   <div class="filters" role="group" aria-label="Бүс нутгаар шүүх">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">Бүгд</button>
+    <button class="chip" type="button" data-filter="Хойд" aria-pressed="false">Хойд</button>
+    <button class="chip" type="button" data-filter="Өмнөд" aria-pressed="false">Өмнөд</button>
+    <button class="chip" type="button" data-filter="Төв" aria-pressed="false">Төв</button>
+    <button class="chip" type="button" data-filter="Баруун" aria-pressed="false">Баруун</button>
+    <button class="chip" type="button" data-filter="Зүүн" aria-pressed="false">Зүүн</button>
+   </div>
+
+   <!-- Картуудыг script.js үүсгэнэ -->
+   <div class="gallery" id="galleryGrid"></div>
+  </section>
+
+  <!-- Яагаад бид -->
+  <section class="section culture" id="culture">
+   <h2 class="section-title">Яагаад Тал нутаг Аялал вэ?</h2>
+   <div class="culture-grid">
+    <article class="culture-card">
+     <h3>Туршлагатай хөтөч</h3>
+     <p>Орон нутгаа сайн мэддэг, англи хэлтэй мэргэжлийн хөтөчүүд аяллын турш танд хамт яваад, газар бүрийн түүх, домгийг сонирхолтой өгүүлнэ.</p>
+    </article>
+    <article class="culture-card">
+     <h3>Гэрийн бааз дахь байр</h3>
+     <p>Жинхэнэ нүүдэлчин айлд зочилж, гэрт хононо. Айргаа амсаж, монгол хоолоор дайлуулж, уламжлалт амьдралыг биеэр мэдэрнэ.</p>
+    </article>
+    <article class="culture-card">
+     <h3>Аюулгүй, тав тухтай</h3>
+     <p>Найдвартай хөнгөн жийп машин, даатгал, аяллын бүх зардлын тодорхой тооцоо. Та зөвхөн аяллаа эдлэхэд л анхаараарай.</p>
+    </article>
+    <article class="culture-card">
+     <h3>Өөрт тохирсон аялал</h3>
+     <p>Гэр бүл, найз нөхөд, байгууллагын багт зориулан маршрут, хугацаа, төсвийг тань хүссэнээр нь тохируулан бэлтгэнэ.</p>
+    </article>
+   </div>
+  </section>
+
+  <!-- Multimedia -->
+  <section class="section" id="video">
+   <h2 class="section-title">Аяллын видео ба хөгжим</h2>
+   <div class="media-grid">
+    <figure class="media">
+     <video controls preload="none" poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'><rect width='16' height='9' fill='%230e2a47'/><circle cx='8' cy='4.5' r='1.5' fill='%23e6a923'/><path d='M7.4 3.8v1.4l1.3-.7z' fill='%230e2a47'/></svg>">
+      <source src="media/tal.mp4" type="video/mp4">
+      Таны хөтөч видео тоглуулахыг дэмжихгүй байна.
+     </video>
+     <figcaption>Манай жуулчдын Хөвсгөл нуурын өглөө</figcaption>
+    </figure>
+    <figure class="media">
+     <div class="audio-art" aria-hidden="true"></div>
+     <audio controls preload="none">
+      <source src="media/morin-huur.mp3" type="audio/mpeg">
+      Таны хөтөч аудио тоглуулахыг дэмжихгүй байна.
+     </audio>
+     <figcaption>Аяллын үеэр сонсох морин хуурын аялгуу</figcaption>
+    </figure>
+   </div>
+  </section>
+  <!-- Миний зургийн цомог (Лаб 10) -->
+  <section class="section" id="album">
+   <h2 class="section-title">Миний зургийн цомог</h2>
+   <p class="lead">Зургаа хайх, газраар шүүх, эрэмбэлэх, лайк дарах, шинээр нэмэх боломжтой.</p>
+
+   <div class="toolbar">
+    <div class="toolbar__field">
+     <label class="toolbar__label" for="albumSearch">Хайх</label>
+     <input class="form__input" id="albumSearch" type="search" placeholder="Нэр, газар, таг...">
+    </div>
+    <div class="toolbar__field">
+     <label class="toolbar__label" for="albumPlace">Газар</label>
+     <select class="form__input" id="albumPlace"><option value="all">Бүгд</option></select>
+    </div>
+    <div class="toolbar__field">
+     <label class="toolbar__label" for="albumSort">Эрэмбэ</label>
+     <select class="form__input" id="albumSort">
+      <option value="default">Нэмсэн дарааллаар</option>
+      <option value="likes">Лайкаар (их нь эхэнд)</option>
+      <option value="title">Нэрээр (А-Я)</option>
+     </select>
+    </div>
+   </div>
+
+   <p class="toolbar__stats" id="albumStats" role="status"></p>
+   <div class="photo-grid" id="photoGrid"></div>
+   <p class="lead" id="photoEmpty" hidden>Тохирох зураг олдсонгүй.</p>
+
+   <h3 class="album__subtitle">Шинэ зураг нэмэх</h3>
+   <form class="form" id="photoForm" novalidate>
+    <div class="form__field">
+     <label class="form__label" for="photo-title">Зургийн нэр</label>
+     <input class="form__input" id="photo-title" name="title" type="text" aria-describedby="photo-title-error">
+     <p class="form__error" id="photo-title-error" aria-live="polite"></p>
+    </div>
+
+    <div class="form__field">
+     <label class="form__label" for="photo-place">Газар</label>
+     <input class="form__input" id="photo-place" name="place" type="text" aria-describedby="photo-place-error">
+     <p class="form__error" id="photo-place-error" aria-live="polite"></p>
+    </div>
+
+    <div class="form__field">
+     <label class="form__label" for="photo-date">Огноо</label>
+     <input class="form__input" id="photo-date" name="date" type="date" aria-describedby="photo-date-error">
+     <p class="form__error" id="photo-date-error" aria-live="polite"></p>
+    </div>
+
+    <button class="btn" type="submit">Цомогт нэмэх</button>
+    <p class="form__status" id="photoStatus" role="status"></p>
+   </form>
+  </section>
+
+  <!-- Санал хүсэлт -->
+  <section class="section" id="sanal">
+   <h2 class="section-title">Санал хүсэлт илгээх</h2>
+   <p class="lead">Аяллын талаар асуулт, санал хүсэлтээ бидэнд илгээнэ үү.</p>
+
+   <form class="form" id="feedbackForm" novalidate>
+    <div class="form__field">
+     <label class="form__label" for="name">Нэр</label>
+     <input class="form__input" id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+     <p class="form__error" id="name-error" aria-live="polite"></p>
+    </div>
+
+    <div class="form__field">
+     <label class="form__label" for="email">И-мэйл</label>
+     <input class="form__input" id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+     <p class="form__error" id="email-error" aria-live="polite"></p>
+    </div>
+
+    <div class="form__field">
+     <label class="form__label" for="password">Нууц үг</label>
+     <input class="form__input" id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-hint password-error">
+     <p class="form__hint" id="password-hint">Дор хаяж 8 тэмдэгт, үсэг ба тоо агуулна.</p>
+     <p class="form__error" id="password-error" aria-live="polite"></p>
+    </div>
+
+    <div class="form__field">
+     <label class="form__label" for="message">Зурвас</label>
+     <textarea class="form__input" id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+     <p class="form__counter" id="messageCount">0 / 500</p>
+     <p class="form__error" id="message-error" aria-live="polite"></p>
+    </div>
+
+    <button class="btn" type="submit">Илгээх</button>
+    <p class="form__status" id="formStatus" role="status"></p>
+   </form>
+  </section>
+
+  <section class="cta" id="holboo">
+   <h2>Өөрийн аяллаа өнөөдрөөс төлөвлөе</h2>
+   <p>info@talnutag.mn &nbsp;|&nbsp; +976 8811 2233</p>
+   <a class="btn btn-light" href="mailto:info@talnutag.mn">Аялал захиалах</a>
+  </section>
+ </main>
+
+ <footer class="site-footer">
+  <p>&copy; 2026 Тал нутаг Аялал ХХК. Бүх эрх хуулиар хамгаалагдсан.</p>
+  <p>Зургууд: Unsplash, Pexels, Wikimedia Commons (чөлөөт лиценз).</p>
+ </footer>
+
+ <!-- Газрын зургийн цонх -->
+ <dialog class="map-dialog" id="mapDialog" aria-labelledby="mapTitle">
+  <div class="map-head">
+   <h3 id="mapTitle"></h3>
+   <a class="map-ext" id="mapOpen" href="#" target="_blank" rel="noopener noreferrer">Google Maps дээр нээх</a>
+   <button class="map-close" id="mapClose" type="button">Хаах</button>
+  </div>
+  <iframe id="mapFrame" title="Газрын зураг" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+ </dialog>
+
+ <script src="js/algorithms.js"></script>
+ <script src="js/validators.js"></script>
+ <script src="js/basics.js"></script>
+  <script src="js/form.js"></script>
+ <script src="js/utils.js"></script>
+ <script src="js/photoTools.js"></script>
+ <script src="js/objectTools.js"></script>
+ <script src="js/album.js"></script>
+ <script src="js/app.js"></script>
+ <script src="js/photoForm.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
